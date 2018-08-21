@@ -8,8 +8,8 @@
 	"name": "bucket-maker",
 	"description": "bucket-maker makes bucket of sliced timline for each span you requested.",
 	"keywords": [
-		"bucket bridage",
-		"bucket relay",
+		"bucket brigade",
+		"bucket-relay",
 		"バケツリレー",
 		"バケツメーカー",
 		"IoT",
@@ -17,7 +17,7 @@
 		"time squence",
 		"reduce I/O"
 	],
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"author": {
 		"name": "Rei Kitajima",
 		"email": "rei.kitajima@gmail.com"
