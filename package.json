@@ -1,0 +1,45 @@
+{
+	"about": {
+		"name": "Bucket-Maker",
+		"author": "Rei Kitajima",
+		"copyright": "Copyright (c) 2018 Rei Kitajima <rei.kitajima@gmail.com>",
+		"id": "com.craftclay.js.bucket-maker"
+	},
+	"name": "bucket-maker",
+	"description": "bucket-maker makes bucket of sliced timline for each span you requested.",
+	"keywords": [
+		"bucket bridage",
+		"bucket relay",
+		"バケツリレー",
+		"バケツメーカー",
+		"IoT",
+		"timeline",
+		"time squence",
+		"reduce I/O"
+	],
+	"version": "0.1.0",
+	"author": {
+		"name": "Rei Kitajima",
+		"email": "rei.kitajima@gmail.com"
+	},
+	"maintainers": [
+		{"name": "Rei Kitajima", "email": "rei.kitajima@gmail.com"}
+	],
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/RayKitajima/Bucket-Maker.git"
+	},
+	"preferGlobal": true,
+	"dependencies": {
+		"cron": ">=1.3.0"
+	},
+	"devDependencies": {
+	},
+	"license": "MIT",
+	"main": "./lib/index.js",
+	"bin": {
+	},
+	"directories": {
+		"lib": "./lib"
+	}
+}
