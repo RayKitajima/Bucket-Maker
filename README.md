@@ -1,7 +1,7 @@
 
 # bucket-maker
 
-To reduce I/O cost, bucket-maker makes bucket of sliced timline for each span you requested.  
+To reduce I/O cost, bucket-maker makes bucket of sliced timline for each *unit* you requested.  
 Name of the bucket is defined by its **day** and **slot**.
 
 * **day** is a number of days from unix epoch
@@ -67,7 +67,7 @@ Internally bucket is an array. And it will periodically *dump* and *write* them 
 | unit      | bucket unit as msec                                                 | 
 | spool     | where to write out bucket file                                      | 
 | dumper    | how to dump elements in the bucket. <br>by default assume them as stirng and join() them | 
-| writer    | how to write out dumpped object. <br>by default write out to file named as \<prefix\>\<day\>.\<slot\>\<suffix\>. | 
+| writer    | how to write out dumped object. <br>by default write out to file named as \<prefix\>\<day\>.\<slot\>\<suffix\>. | 
 | start     | whether to start writing at created                                 | 
 | cron_time | frequency of checking bucket                                        | 
 | log       | how to system log                                                   |
@@ -109,7 +109,7 @@ const writer = function(maker){
 	let now = Date.now();
 	for( let i=0; i<names.length; i++ ){
 		if( maker.Buckets[names[i]].cutoff > now ){ continue; }   // skip: still putting into the bucket
-		let dump = maker.dumpper(maker.Buckets[names[i]].buffer);
+		let dump = maker.dumper(maker.Buckets[names[i]].buffer);
 		let key  = name[i];                                       // wait:17764.4762.bucket
 		client.set(key,dump,function(err,res){
 			if( err ){
