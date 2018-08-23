@@ -96,7 +96,7 @@ Reporting load avarage every sec. And make 5sec bucket.
 
 ``` 
 $ ls 
-4825.localhost.17764.4761.bucket  4732.localhost.17764.4762.bucket
+4825.localhost.17764.4761.bucket  4825.localhost.17764.4762.bucket
 ``` 
 
 ## More reducing I/O cost with redis
